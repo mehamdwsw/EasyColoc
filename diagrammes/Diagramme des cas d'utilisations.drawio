@@ -117,10 +117,10 @@
                     <mxGeometry x="100" y="250" width="30" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="jpH12i4qNnLmAdQJi_8z-24" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0.88); font-family: &amp;quot;Nunito Sans&amp;quot;, &amp;quot;sans-serif&amp;quot;; font-size: 14px; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;colocation add&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.88); font-family: &amp;quot;Nunito Sans&amp;quot;, &amp;quot;sans-serif&amp;quot;; font-size: 14px; text-align: start;&quot;&gt;&amp;nbsp;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="345" width="130" height="50" as="geometry"/>
+                    <mxGeometry x="370" y="260" width="130" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="jpH12i4qNnLmAdQJi_8z-25" value="&lt;div style=&quot;text-align: start;&quot;&gt;&lt;font color=&quot;rgba(33, 33, 33, 0.88)&quot; face=&quot;Nunito Sans, sans-serif&quot; style=&quot;font-size: 12px;&quot;&gt;Inviter des membres&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=default;" parent="1" vertex="1">
-                    <mxGeometry x="390" y="345" width="130" height="50" as="geometry"/>
+                    <mxGeometry x="370" y="345" width="130" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="jpH12i4qNnLmAdQJi_8z-26" value="&lt;div style=&quot;text-align: start;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0.88); font-family: &amp;quot;Nunito Sans&amp;quot;, &amp;quot;sans-serif&amp;quot;; font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;Retirer un membre&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=default;" parent="1" vertex="1">
                     <mxGeometry x="540" y="345" width="130" height="50" as="geometry"/>
