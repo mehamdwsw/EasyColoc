@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Leadership extends Model
+{
+    protected $fillable = ['role'];
+    public function Colocation(){
+        return $this->belongsTo(Colocation::class);
+    }
+    public function User(){
+        return $this->belongsTo(User::class);
+    }
+}

@@ -21,8 +21,18 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role'
+        'role',
+        'is_banned'
     ];
+    public function leadership(){
+        return $this->hasMany(Leadership::class);
+    }
+    public function Depenses(){
+        return $this->hasMany(Depenses::class);
+    }
+    public function doits(){
+        return $this->hasMany(doit::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

@@ -11,22 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('colocation_user', function (Blueprint $table) {
-            $table->id();
+        Schema::create('leaderships', function (Blueprint $table) {
+             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('colocation_id')->constrained()->onDelete('cascade');
-            $table->boolean('is_owner')->default(false);
+            $table->string('role');
             $table->timestamp('joined_at')->useCurrent();
             $table->timestamp('left_at')->nullable();
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('colocation_user');
+        Schema::dropIfExists('leaderships');
     }
 };

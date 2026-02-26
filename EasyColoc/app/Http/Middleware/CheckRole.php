@@ -4,11 +4,11 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Container\Attributes\Auth;
-use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-// use Illuminate\Support\Facades\Auth;
-class CheckBanned
+
+
+class CheckRole
 {
     /**
      * Handle an incoming request.
@@ -17,10 +17,11 @@ class CheckBanned
      */
     public function handle(Request $request, Closure $next): Response
     {
-
-        if (auth()->check() & User::where('id', auth()->id())->first()->is_banned == 1) {
-            return response()->view('is_banned');
-        }
+        // dd(user::all());
+        if(Auth()->user()->role=="user"){
         return $next($request);
+        }
+        
+        return Response()->view('admin.dashboard');
     }
 }

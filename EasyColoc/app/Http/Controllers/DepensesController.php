@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Depensess;
+use App\Models\Depenses;
 use Illuminate\Http\Request;
 
-class DepensessController extends Controller
+class DepensesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class DepensessController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Depensess $depensess)
+    public function show(Depenses $depensess)
     {
         //
     }
@@ -42,7 +42,7 @@ class DepensessController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Depensess $depensess)
+    public function edit(Depenses $depensess)
     {
         //
     }
@@ -50,7 +50,7 @@ class DepensessController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Depensess $depensess)
+    public function update(Request $request, Depenses $depensess)
     {
         //
     }
@@ -58,7 +58,7 @@ class DepensessController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Depensess $depensess)
+    public function destroy(Depenses $depensess)
     {
         //
     }
