@@ -33,7 +33,7 @@
                     class="flex items-center gap-4 bg-indigo-50 text-indigo-600 px-4 py-3 rounded-2xl font-bold transition">
                     <i class="fas fa-th-large"></i> Dashboard
                 </a>
-                <a href="#"
+                <a href="{{ route('colocations.index') }}"
                     class="flex items-center gap-4 text-slate-400 hover:bg-slate-50 px-4 py-3 rounded-2xl font-semibold transition">
                     <i class="fas fa-home"></i> Colocations
                 </a>
@@ -52,6 +52,14 @@
                     </div>
                 </div>
             </div>
+            <form method="POST" action="{{ route('logout') }}" class="mt-auto p-6">
+                @csrf
+                <button type="submit"
+                    class="group flex items-center justify-center w-full gap-3 bg-rose-50 hover:bg-rose-500 text-rose-600 hover:text-white py-4 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-sm hover:shadow-rose-200">
+                    <i class="fas fa-power-off group-hover:rotate-90 transition-transform duration-500"></i>
+                    <span>Déconnexion</span>
+                </button>
+            </form>
         </aside>
 
         <main class="flex-1 lg:h-screen overflow-y-auto bg-slate-50/50 p-6 lg:p-12">
@@ -104,7 +112,7 @@
                 </div>
             </div>
 
-            @if (!Auth::user()->leadership)
+            @if (!count(Auth::user()->leadership) <= 0)
                 <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
                     <div class="xl:col-span-2 bg-white rounded-[2.5rem] shadow-sm border border-slate-100 p-8 lg:p-10">
                         <div class="flex justify-between items-center mb-8">
@@ -149,9 +157,16 @@
                             <button
                                 class="w-full bg-white/10 hover:bg-white/20 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] transition">Voir
                                 la liste</button>
-                            <button
-                                class="w-full bg-rose-500 hover:bg-rose-600 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] transition shadow-lg shadow-rose-500/20">Quitter
-                                Coloc</button>
+                                
+                            <form action="{{ route('colocations.destroy', Auth::user()->leadership[0]->colocation_id) }}" method="POST"
+                                onsubmit="return confirm('Êtes-vous sûr de vouloir quitter cette colocation ? Cela peut impacter votre réputation.')">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit"
+                                    class="w-full bg-rose-500 hover:bg-rose-600 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] transition shadow-lg shadow-rose-500/20 text-white">
+                                    Quitter 
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>

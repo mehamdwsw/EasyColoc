@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ColocationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\CheckBanned;
 use App\Http\Middleware\CheckRole;
@@ -7,8 +8,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
+})->name('welcome');
+Route::resource('colocations', ColocationController::class);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard')->middleware(CheckBanned::class)->middleware(CheckRole::class);
